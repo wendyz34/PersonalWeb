@@ -1,0 +1,119 @@
+<html>
+<title>Personal WebPage</title>
+<script>
+  // Store color
+  var selectedColor = '';
+
+function showSelectedColor() {
+    var newSelectedColor = document.querySelector('input[name="color"]:checked');
+    var resultParagraph = document.getElementById('result');
+
+    if (newSelectedColor) {
+        selectedColor = newSelectedColor.value; 
+        
+        if (selectedColor === 'black') {
+            resultParagraph.textContent = 'The color black can indicate power, creativity, elegance, and sexuality. Black is frequently worn to suggest a person’s nature as independent, strong, and sophisticated. In some cultures, black is also worn during periods of mourning. If black is your preference, you may like how it makes you feel powerful and mysterious.';
+        } else if (selectedColor === 'white') {
+            resultParagraph.textContent = 'White often signals purity, birth, and innocence. Preferring white can also mean that you are organized, independent, and logical. Bare and bright, white can make you feel clean, fresh, and open to opportunities. ';
+        } else if (selectedColor === 'red') {
+            resultParagraph.textContent = 'Red often symbolizes intense desire and aggression. If your favorite is red, you may be someone who is driven, adventurous, and active. To some, red can feel angry or hostile; for others, though, it is used to represent love and romance.';
+        } else if (selectedColor === 'purple') {
+            resultParagraph.textContent = 'Purple is a popular one for many. This hue association with luxury goes far back in history as purple was often used to symbolize prosperity or royalty. If you favor purple, you may be ambitious, with a solid sense of self-worth and individuality.';
+        } else if (selectedColor === 'pink') {
+            resultParagraph.textContent = 'Those who prefer pink typically have no trouble expressing themselves. Pink is often tied to tenderness, hopefulness, and virtue. If you tend to surround yourself with pink hues, you may be joyful, kind, and honest.';
+        } else if (selectedColor === 'orange') {
+            resultParagraph.textContent = 'If your favorite is orange, you may be a social person with a vibrant personality, as this shade can represent energy, warmth, and enthusiasm. Orange is typically seen as a happy color, often associated with sunshine and the spring season. If your preference is orange, you may blend the characteristics associated with the colors red and yellow.';
+        } else if (selectedColor === 'blue') {
+            resultParagraph.textContent = 'The most popular favorite color, blue symbolizes peace and tranquility. This may be why blue is commonly used as wall paint in bedrooms. If your preference is blue, you could be perceived as a calm, trustworthy, loyal, reliable person and a great friend. Blue is thought to promote unity and safety.';
+        } else if (selectedColor === 'green') {
+            resultParagraph.textContent = 'Often associated with finance and money, green can also represent nature, signal good luck, fertility, and rebirth, as well as embody physical fulfillment. If you prefer green, others may view you as loyal, composed, and independent, with a strong connection to personal well-being and a balanced lifestyle.';
+        } else if (selectedColor === 'yellow') {
+            resultParagraph.textContent = 'If you love yellow, you may be an energetic and happy person. Yellow is associated with optimism, intelligence, and creativity. It can signal a fun-loving personality and a warm spirit.';
+        } else if (selectedColor === 'grey') {
+            resultParagraph.textContent = 'Often, gray is perceived as chic, modern, and stylish. If your favorite is gray, you may enjoy neutral tones because they don’t draw too much attention to you. Gray can indicate a balanced, intelligent personality who is a good problem solver.  ';
+        } else if (selectedColor === 'brown') {
+            resultParagraph.textContent = 'Brown is a natural color that represents earthy and organic materials. If your favorite is brown, you may be drawn to nature or enjoy a simpler way of living. An attraction to the brown may also imply that you enjoy certainty in life and have little patience for negative thoughts.';
+        }
+    } else {
+        // If no new color is selected, keep displaying the previous selection
+        if (selectedColor) {
+            resultParagraph.textContent = 'You selected ' + selectedColor + ' color.';
+        } else {
+            // If no color is selected at all, display a message
+            resultParagraph.textContent = 'Please select a color.';
+        }
+    }
+}  
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<body>
+<!--Title-->
+<h1><b>Personal WebPage</b></h1>
+<!--Buttons-->
+<div class = sidebar style = width:25%>
+    <a href="index.html">
+        <button class ="block click"><b>Home</b></button> 
+    </a>
+    <a href="favorite.html">
+         <button class = "block click"><b>Favorites</b></button>
+    </a>
+    <a href="skills.html">
+        <button class="block click"><b>Skills</b></button>
+    </a>
+    <a href="spots.html">
+        <button class="block click"><b>Spots</b></button>
+    </a>
+    </div>
+    <audio controls autoplay class>
+        <source src = "water.mp3" type = "audio/mp3" >
+    </audio>
+
+<div style="margin-left:25%">
+
+<!--Content-->
+<h2>Making a form</h2>
+<p>Choose your favorite color and submit. See if it matches your personality:</p>
+  <form>
+    <input type="radio" id="black" name="color" value="black">
+    <label for="black">black</label><br>
+
+    <input type="radio" id="white" name="color" value="white">
+    <label for="white">white</label><br>
+
+    <input type="radio" id="red" name="color" value="red">
+    <label for="red">red</label><br>
+
+    <input type="radio" id="purple" name="color" value="purple">
+    <label for="purple">purple</label><br>
+
+    <input type="radio" id="pink" name="color" value="pink">
+    <label for="pink">pink</label><br>
+
+    <input type="radio" id="orange" name="color" value="orange">
+    <label for="orange">orange</label><br>
+
+    <input type="radio" id="blue" name="color" value="blue">
+    <label for="blue">blue</label><br>
+
+    <input type="radio" id="green" name="color" value="green">
+    <label for="green">green</label><br>
+
+    <input type="radio" id="yellow" name="color" value="yellow">
+    <label for="yellow">yellow</label><br>
+
+    <input type="radio" id="grey" name="color" value="grey">
+    <label for="grey">grey</label><br>
+
+    <input type="radio" id="brown" name="color" value="brown">
+    <label for="brown">brown</label><br>
+
+    <input type="submit" value="Submit" onclick="showSelectedColor(); return false;">
+    <p id="result"></p> 
+    <p>All credits for the personality answers:'https://www.betterhelp.com/advice/general/color-coded-what-your-favorite-color-says-about-you/'</p>
+</form>
+
+  </div>
+  <p id = "copyright">&copy; 2023, All Rights Reserved</p>
+</body>
+</html>

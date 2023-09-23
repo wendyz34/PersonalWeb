@@ -1,0 +1,81 @@
+body{
+  background-color: #bccbde;  
+}
+h1{
+  text-shadow: 2px 2px;
+  margin-left: 220px;
+}
+h3{
+  margin-left: 20px;
+}
+#copyright{
+  margin-left: 220px;
+}
+* {box-sizing: border-box}
+.container{
+  display:flex;
+  align-items: flex-start;
+  flex-direction: bottom;
+}
+#background-video {
+  width: 70vw;
+  height: 70vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.click{
+  display: block;
+  background-color: #c2dde6;
+  color: black;
+  cursor: pointer;
+}
+.click:hover{
+  background-color: #bccbde;
+  color:darkgray;
+}
+div{
+  margin-left: 0;
+}
+.sidebar {
+  height: 100%;
+  width: 25%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #c2dde6;
+  padding-top: 50px;
+}
+
+/* Style for the sidebar buttons */
+.sidebar button {
+  width: 100%;
+  padding: 50px;
+  text-align: left;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+table {
+  width: 100%;
+  border: 3px solid;
+  background-color: mintcream;
+}
+ul {
+  background-color: #9456cf;
+  padding: 20px;
+  margin-top: 5px;
+}
+
+ul li {
+  background: #d3abe1;
+  color: darkblue;
+  margin: 5px;
+}
+audio{
+  margin-left: 220px;
+}
+
